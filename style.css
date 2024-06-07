@@ -14,7 +14,7 @@
 }
 
 .background {
-  background-image: url("/images/bg-desktop-light.jpg");
+  background-image: url("images/bg-desktop-light.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -204,5 +204,3 @@ ul li:hover .remove {
   --textColor: hsl(234, 11%, 52%);
   --textColorHover: hsl(236, 33%, 92%);
 }
-
-/
