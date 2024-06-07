@@ -6,7 +6,6 @@ itemCount.innerText = document.querySelectorAll('.list').length
 const itemInput = document.getElementById('item-input');
 const inputButton = document.querySelector('#input-field button');
 const todoList = document.querySelector('.todo-list-items');
-const itemID = document.querySelector('.filters input[type="radio"]:checked')
 
 //appending the task to the todo list
 inputButton.addEventListener('click' ,() =>{
@@ -86,4 +85,20 @@ clearCompleted.addEventListener('click' , () =>{
     itemChecked.forEach(item => {
         removeItems(item.closest('li'))
     });
+})
+
+// For changing theme
+const themeChange = document.querySelector('.theme-img');
+const backgroundImage = document.querySelector('.background')
+themeChange.addEventListener('click' , () =>{
+  document.body.classList.toggle('dark-theme')
+  if (document.body.classList.contains('dark-theme')) {
+    themeChange.src = 'images/icon-sun.svg';
+    backgroundImage.style.backgroundImage = ' url("images/bg-desktop-dark.jpg")'
+  }
+  else{
+    themeChange.src = 'images/icon-moon.svg';
+    backgroundImage.style.backgroundImage = ' url("images/bg-desktop-light.jpg")'
+  }
+
 })
